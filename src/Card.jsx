@@ -1,16 +1,16 @@
 import React from "react";
 import './Card.css'
 
-function Card() {
+function Card({titulo, descripcion, url}) {
 
     return (
         <>
             <div className="card">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDIDXGcTPIly3GqABxpx0zudJj83gGKjHpVA&s" alt="" />
+                <img src={url} alt="" />
                 <div className="card-info">
-                    <h2>Spider-Man</h2>
-                    <p>El amigable vecino de Nueva York.</p>
-                    <button class="btn">Ver más</button>
+                    <h2>{titulo}</h2>
+                    <p>{descripcion}</p>
+                    <button className="btn">Ver más</button>
                 </div>
             </div>
         </>
