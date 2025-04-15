@@ -1,0 +1,44 @@
+.header {
+    background-color: #0D0D0D;
+    text-align: center;
+    padding: 3rem 1rem 2rem;
+    border-bottom: 2px solid #1E90FF;
+  }
+
+  .header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #1E90FF;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 0 10px #1E90FF;
+  }
+
+  .header p {
+    font-size: 1.2rem;
+    color: #C0C0C0;
+    margin-top: 0.5rem;
+    text-shadow: 0 0 8px #C0C0C0;
+  }
+
+  @media (max-width: 768px) {
+    .header h1 {
+      font-size: 2.2rem;
+    }
+  
+    .header p {
+      font-size: 1rem;
+    }
+  
+  }
+  
+  @media (max-width: 480px) {
+    .header h1 {
+      font-size: 1.8rem;
+    }
+  
+    .header p {
+      font-size: 0.95rem;
+    }
+  
+  }
