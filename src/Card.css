@@ -7,8 +7,8 @@
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin: 20px;
-    width: 200px;             /* Ajusta a tu preferencia */
-    height: 300px;
+    width: 360px;       
+    height: 600px;
   }
   
   .card img {
@@ -24,23 +24,78 @@
     text-align: center;
     color: #FFFFFF;
     position: absolute;
+    display: flex;
+    flex-wrap: wrap;
     bottom: 0;
     width: 100%;
+    min-height: 300px;
     background: rgba(0, 0, 0, 0.7);
   }
+
+  .info-row {
+    display: flex;
+    width: 100%;
+    align-items: stretch; 
+  }
+  
+  .powers{
+    width: 51%;
+    text-align: left;
+    padding: 0 5px;
+  }
+
+  .stats {
+    width: 45%;
+    text-align: left;
+    padding: 0 5px;
+  }
+  
+  .divider {
+    width: 1px;
+    background-color: #ccc;
+    height: auto;
+    margin: 0 5px;
+  }
+  
+  .title{
+    width: 51%;
+    text-align: left;
+    padding: 0 5px;
+  }
+
+  .universe {
+    width: 45%;
+    text-align: ri;
+    padding: 0 5px;
+    
+    
+  }
+
+  .universe h3{
+    color: #1E90FF;
+    text-shadow: 0 0 10px #1E90FF;
+    background-color: #ffffff;
+    opacity: 0.7; 
+    border-radius: 20px;
+   }
   
   .card-info h2 {
     font-size: 1.1rem;
     color: #FF1493;
     text-transform: uppercase;
-    text-shadow: 0 0 10px #FF1493;
+    text-shadow: 0 0 10px #FF1493;   
   }
   
   .card-info p {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     color: #C0C0C0;
     margin-top: 0.5rem;
     text-shadow: 0 0 8px #C0C0C0;
+    
+  }
+
+  .descrip {
+    margin-bottom: 20px;
   }
   
   .card:hover {
@@ -66,10 +121,13 @@
     margin-top: 1rem;
     border-radius: 5px;
     transition: all 0.3s ease;
-    box-shadow: 0 0 5px #ffffff;
+    box-shadow: 0 0 3px #ffffff;
+    width: 100%;
+    
   }
   
   .card .btn:hover {
     background-color: #FF1493;
     box-shadow: 0 0 8px #ffffff;
+    cursor: pointer;
   }

@@ -1,16 +1,43 @@
 import React from "react";
 import './Card.css'
 
-function Card({titulo, descripcion, url}) {
+function Card({ name, description, image, powers, stats, universe }) {
 
     return (
         <>
             <div className="card">
-                <img src={url} alt="" />
+                <img src={image} alt="" />
                 <div className="card-info">
-                    <h2>{titulo}</h2>
-                    <p>{descripcion}</p>
-                    <button className="btn">Ver más</button>
+                    <div className="info-row">
+                        <div className="title">
+                            <h2>{name}</h2>
+                        </div>
+                        <div className="universe">
+                            <h3>{universe}</h3>
+                        </div>
+                    </div>
+
+                    <p className="descrip">{description}</p>
+
+                    <div className="info-row">
+                        <div className="powers">
+                            {powers.map((power, i) => (
+                                <p key={i}>- {power}</p>
+                            ))}
+                        </div>
+
+                        <div className="divider" />
+
+                        <div className="stats">
+                            {Object.entries(stats).map(([key, { value, icon }]) => (
+                                <p key={key}>
+                                    {icon} {key.charAt(0).toUpperCase() + key.slice(1)}: {value}/5
+                                </p>
+                            ))}
+                        </div>
+                    </div>
+
+                    <button className="btn">Elegir</button>
                 </div>
             </div>
         </>
