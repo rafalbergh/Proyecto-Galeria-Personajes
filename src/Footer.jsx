@@ -6,8 +6,10 @@ function Footer() {
     return (
         <>
             <div className="footer">
-                <h2>Rafael García - 2025</h2>
-               
+                <h3>Rafael García - 2025</h3>
+                <a href="#" className="links">Términos y condiciones</a>
+                <a href="#" className="links">Política de privacidad</a>
+                <a href="#" className="links" >Contacto</a>
             </div>
         </>
     )
