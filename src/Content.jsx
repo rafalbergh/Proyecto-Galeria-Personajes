@@ -127,17 +127,17 @@ function Content() {
           
           const [modalData, setModalData] = useState(null);
 
-          const handleOpenModal = (cardInfo) => {
+          const openModal = (cardInfo) => {
             setModalData(cardInfo);
           };
 
-          const handleCloseModal = () => {
+          const closeModal = () => {
             setModalData(null);
           };
 
     return (
         <div className="gallery">
-          <Modal data={modalData} onClose={handleCloseModal}/>
+          <Modal data={modalData} onClose={closeModal}/>
             {cardsData.map((card) => (
                 <Card
                     name={card.name}
@@ -146,7 +146,7 @@ function Content() {
                     powers={card.powers}
                     stats={card.stats}
                     universe={card.universe}
-                    onSelect={() => handleOpenModal(card)}
+                    onSelect={() => openModal(card)}
                 />
             ))}
         </div>
