@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from 'react';
 import './Content.css'
 import Card from "./Card";
+import Modal from './Modal'
 
 function Content() {
 
@@ -124,9 +125,19 @@ function Content() {
             }
           ];
           
+          const [modalData, setModalData] = useState(null);
+
+          const handleOpenModal = (cardInfo) => {
+            setModalData(cardInfo);
+          };
+
+          const handleCloseModal = () => {
+            setModalData(null);
+          };
 
     return (
         <div className="gallery">
+          <Modal data={modalData} onClose={handleCloseModal}/>
             {cardsData.map((card) => (
                 <Card
                     name={card.name}
@@ -135,6 +146,7 @@ function Content() {
                     powers={card.powers}
                     stats={card.stats}
                     universe={card.universe}
+                    onSelect={() => handleOpenModal(card)}
                 />
             ))}
         </div>

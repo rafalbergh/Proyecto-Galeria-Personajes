@@ -1,7 +1,7 @@
 import React from "react";
 import './Card.css'
 
-function Card({ name, description, image, powers, stats, universe }) {
+function Card({ name, description, image, powers, stats, universe, onSelect}) {
 
     return (
         <>
@@ -37,7 +37,7 @@ function Card({ name, description, image, powers, stats, universe }) {
                         </div>
                     </div>
 
-                    <button className="btn">Elegir</button>
+                    <button className="btn" onClick={onSelect}>Elegir</button>
                 </div>
             </div>
         </>
