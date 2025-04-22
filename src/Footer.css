@@ -8,5 +8,8 @@
   .links {
     margin: 0 10px; 
     text-decoration: none; 
-    color: #333;
+    font-size: 1rem;
+    color: #C0C0C0;
+    margin-top: 0.5rem;
+    text-shadow: 0 0 8px #C0C0C0;
   }
